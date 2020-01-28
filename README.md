@@ -1,6 +1,6 @@
 # Spacebrite
 
-- Live Site (not yet deployed)
+- [Live Site](http://spacebrite-demo.herokuapp.com/)
 
 ## Features
 
