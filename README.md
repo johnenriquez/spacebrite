@@ -1,24 +1,15 @@
-# README
+# Spacebrite
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features
 
-Things you may want to cover:
+* Events
+* Registration / Tickets
+* Categories
+* Bookmark events
+* Bonus: Google Maps integration
+* Bonus: Search
 
-* Ruby version
+## Useful Links
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [Design docs / wiki](https://github.com/johnenriquez/spacebrite/wiki)
+- [Github repo](https://github.com/johnenriquez/spacebrite)
