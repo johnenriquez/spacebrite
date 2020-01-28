@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 document.addEventListener("DOMContentLoaded", () => {
     ReactDOM.render(
-        <h1>Welcome to Spacebrite!</h1>,
+        <h1>Spacebrite has launched! 🚀</h1>,
         document.getElementById('root')
     );
 });
