@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
             login(@user)
             render "api/users/show"
         else
-            render json: ['Invalid Credentials'], status: 401
+            render json: ['Couldn\'t log in with that email/password combination'], status: 401
         end
     end
 
@@ -18,7 +18,7 @@ class Api::SessionsController < ApplicationController
             logout(current_user)
             render json: {}
         else
-            render json: ['no user to log out'], status: 404
+            render json: ['No current user to log out'], status: 404
         end
     end
 
