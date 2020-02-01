@@ -1,0 +1,29 @@
+.homepage {}
+
+.splash-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    padding: 2em;
+    color: $text-color-light;
+    background-image: image-url('nasa-horiz.jpeg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-color: #333;
+
+    & h2 {
+        max-width: 70%;
+        line-height: 1;
+        font-size: 3.5rem;
+    }
+
+    & p {
+        margin: 0;
+    }
+
+    & small {
+        color: darken($text-color-light, 30%);
+    }
+}

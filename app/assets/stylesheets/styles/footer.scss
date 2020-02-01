@@ -1,0 +1,11 @@
+.site-footer {
+    border-top: 1px solid #444;
+    background-color: $footer-bg-color;
+    color: $text-color-light;
+    padding: 2em;
+    text-align: center;
+}
+
+.site-footer a {
+    color: $link-color-light;
+}

@@ -19,7 +19,6 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
-        this.props.history.push("/");
     }
 
     sessionErrors() {
@@ -54,11 +53,11 @@ class SessionForm extends React.Component {
                 <form className={formClass} onSubmit={ this.handleSubmit }>
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
-                        <input type="text" name="email" value={this.state.email} onChange={this.update('email')} />
+                        <input type="text" name="email" placeholder="Email" value={this.state.email} onChange={this.update('email')} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password</label>
-                        <input type="password" name="password" value={this.state.password} onChange={this.update('password')} />
+                        <input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.update('password')} />
                     </div>
                     <div className="form-group">
                         <button type="submit">{(isSignup) ? 'Sign Up' : 'Log In'}</button>

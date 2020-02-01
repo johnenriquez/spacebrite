@@ -1,0 +1,80 @@
+body {
+    background-color: $bg-color;
+    color: $text-color-dark;
+    font-family: $base-font-family;
+    font-size: 100%; // 16px
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-weight: $bold;
+}
+h1      { font-size: 2em;       /* 2*16 = 32 */         }
+h2      { font-size: 1.5em;     /* 1.5*16 = 24 */       }
+h3      { font-size: 1.17em;    /* 1.17*16 = 18.72 */   }
+h4      { font-size: 1em;       /* 1*16 = 16 */         }
+h5      { font-size: 0.83em;    /* 0.83*16 = 13.28 */   }
+h6      { font-size: 0.75em;    /* 0.75*16 = 12 */      }
+
+p {
+    line-height: 1.5;
+    margin: 0 0 1em;
+}
+
+a {
+    color: lighten($delta-blue, 35%);
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+}
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+    display: inline-block;
+    border: none;
+    padding: .5rem 1rem;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: $button-bg-color;
+    color: $button-text-color;
+    font-size: .9rem;
+    font-weight: $bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background $default-transition-length;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        background: lighten($button-bg-color, 10%);
+    }
+}
+
+input[type=text],
+input[type=password],
+textarea {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: .5rem;
+    outline: none;
+    color: lighten($text-color-dark, 15%);
+    transition: border-color $default-transition-length;
+
+    &:focus {
+        border-color: $delta-blue;
+        color: $text-color-dark;
+    }
+}
+
+small {
+    font-size: .8rem;
+}
