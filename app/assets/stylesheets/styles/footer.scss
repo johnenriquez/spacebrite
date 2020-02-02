@@ -1,11 +1,29 @@
 .site-footer {
-    border-top: 1px solid #444;
     background-color: $footer-bg-color;
     color: $text-color-light;
-    padding: 2em;
     text-align: center;
 }
 
 .site-footer a {
     color: $link-color-light;
+}
+
+.footer-interlude a {
+    $break-cta: 420px;
+
+    display: block;
+    background-color: #000;
+    font-size: 1.1rem;
+    padding: 2rem;
+    text-align: left;
+    text-decoration: none;
+
+    @media (min-width: $break-cta) {
+        text-align: center;
+        padding: 3rem;
+    }
+}
+
+.footer-links {
+    padding: 2em;
 }
