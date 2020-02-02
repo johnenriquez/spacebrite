@@ -1,0 +1,35 @@
+.splash-banner {
+    background-color: $delta-blue;
+    background-image: image-url('nasa-horiz.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .splash-banner-content {
+        padding: 4em 2em;
+        color: $text-color-light;
+        background: rgba($delta-blue, 0.6);
+
+        @media (min-width: 685px) {
+            padding: 8em 4em;
+        }
+    }
+
+    & h1 {
+        margin-bottom: .25em;
+        font-size: 2.2rem;
+        line-height: 1.25;
+
+        @media (min-width: 685px) {
+            margin-bottom: 0;
+            font-size: 3.5em;
+        }
+    }
+
+    & p { margin-bottom: 2em; }
+
+    & .btn {
+        padding: .5em 1em;
+        font-size: 1.2rem;
+    }
+}

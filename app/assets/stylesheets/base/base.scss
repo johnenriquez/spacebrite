@@ -7,8 +7,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase;
-    font-weight: $bold;
+    font-family: $header-font-family;
 }
 h1      { font-size: 2em;       /* 2*16 = 32 */         }
 h2      { font-size: 1.5em;     /* 1.5*16 = 24 */       }
@@ -35,19 +34,21 @@ em { font-style: italic; }
 button,
 [type=button],
 [type=reset],
-[type=submit] {
+[type=submit],
+.btn {
     display: inline-block;
-    border: none;
-    padding: .5rem 1rem;
     margin: 0;
-    text-decoration: none;
-    text-transform: uppercase;
-    background: $button-bg-color;
-    color: $button-text-color;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: $default-border-radius;
+    text-align: center;
     font-size: .9rem;
     font-weight: $bold;
+    text-decoration: none;
+    color: $button-text-color;
+    background: $button-bg-color;
+    background-image: $button-gradient;
     cursor: pointer;
-    text-align: center;
     transition: background $default-transition-length;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -55,18 +56,20 @@ button,
 
     &:hover,
     &:focus {
-        background: lighten($button-bg-color, 10%);
+        text-decoration: none;
+        background: lighten($button-bg-color, 0%);
+        background-image: lighten($button-bg-color, 0%);
     }
 }
 
 input[type=text],
 input[type=password],
 textarea {
-    border: 1px solid #ccc;
-    background-color: #fff;
     padding: .5rem;
-    outline: none;
+    border: 1px solid #ccc;
     color: lighten($text-color-dark, 15%);
+    background-color: #fff;
+    outline: none;
     transition: border-color $default-transition-length;
 
     &:focus {

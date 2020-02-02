@@ -2,7 +2,6 @@
     background-color: $header-bg-color;
     color: $text-color-light;
     padding: 1em;
-    border-bottom: 1px solid #444;
 }
 
 .site-header .container {
@@ -17,26 +16,11 @@
     transition: color $default-transition-length/2;
 
     &:hover { color: lighten($delta-blue, 60%); }
-
 }
 
 .site-logo {
-    & h1 { font-size: 1rem; }
+    & h1 { font-size: 1.3rem; }
     & i { margin-left: .5em; }
 }
 
-.auth-links {
-
-    & ul {
-        display: flex;
-        align-items: center;
-    }
-
-    li { margin: 0 .5em; }
-
-    a {
-        font-weight: $bold;
-        text-transform: uppercase;
-        font-size: .8rem;
-    }
-}
+@import "./components/auth_links";
