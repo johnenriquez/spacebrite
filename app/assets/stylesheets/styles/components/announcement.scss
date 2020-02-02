@@ -1,4 +1,6 @@
 .announcement {
+    $annoucement-max-width: 1200px;
+
     overflow: auto;
     max-height: 100%;
     font-size: .9rem;
@@ -13,12 +15,14 @@
     }
 
     & > .inner {
+        max-width: $annoucement-max-width;
+        margin: 0 auto;
         padding: 1em;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
     }
-
+    
     & a {
         color: #fff;
 
