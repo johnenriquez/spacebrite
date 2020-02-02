@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const FalseLink = ({ to="#", className, children }) => (
+const doNothing = e => e.preventDefault();
+
+const FalseLink = ({ to = "#", className, onClick = doNothing, children }) => (
     <Link
         to={to}
-        className={className}
-        onClick={e => e.preventDefault()}
+        className={`falselink${className ? " " + className : ""}`}
+        onClick={onClick}
     >
         {children}
     </Link>
