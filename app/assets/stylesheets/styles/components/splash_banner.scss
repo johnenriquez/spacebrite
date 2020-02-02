@@ -33,3 +33,37 @@
         font-size: 1.2rem;
     }
 }
+
+.banner-cta {
+    $banner-cta-breakpoint: 520px;
+    $cta-bg-color: #333;
+    color: #fff;
+
+    @media (min-width: $banner-cta-breakpoint) {
+        & ul { display: flex; }
+        & li { flex: 1; }
+    }
+
+    & a {
+        display: block;
+        text-align: center;
+        color: #fff; 
+        background-color: $cta-bg-color;
+        padding: 1rem;
+        font-size: 1.1rem;
+
+        @media (min-width: $banner-cta-breakpoint) {
+            padding: 2rem;
+            font-size: 1.2rem;
+        }
+
+        &:hover {
+            text-decoration: none;
+            background-color: lighten($cta-bg-color, 5%);
+        }
+    }
+
+    & i {
+        margin-left: .25rem;
+    }
+}
