@@ -1,0 +1,16 @@
+.session-form-container {
+    flex: 1;
+    background: #00f;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+}
+
+.session-form {
+    flex: 1;
+    background-color: #fff;
+    padding: 3em;
+    max-width: 40%;
+    // margin: 3em auto;
+}

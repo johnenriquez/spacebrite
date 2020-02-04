@@ -46,11 +46,11 @@ class SessionForm extends React.Component {
 
         return (
             <div className="session-form-container">
-                <header className="session-form-header">
-                    <h1>{ (isSignup) ? "Sign Up" : "Log In" }</h1>
-                </header>
-                { this.sessionErrors() }
-                <form className={formClass} onSubmit={ this.handleSubmit }>
+                <form className={formClass} onSubmit={this.handleSubmit}>
+                    <header className="session-form-header">
+                        <h1>{(isSignup) ? "Sign Up" : "Log In"}</h1>
+                    </header>
+                    {this.sessionErrors()}
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
                         <input type="text" name="email" placeholder="Email" value={this.state.email} onChange={this.update('email')} />
@@ -62,10 +62,10 @@ class SessionForm extends React.Component {
                     <div className="form-group">
                         <button type="submit">{(isSignup) ? 'Sign Up' : 'Log In'}</button>
                     </div>
+                    <footer className="session-form-footer">
+                        {this.formSwitchMessage(formType)}
+                    </footer>
                 </form>
-                <footer className="session-form-footer">
-                    {this.formSwitchMessage(formType)}
-                </footer>
             </div>
         );
     }
