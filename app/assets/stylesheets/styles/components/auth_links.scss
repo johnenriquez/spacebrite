@@ -13,3 +13,16 @@
         font-size: .8rem;
     }
 }
+
+.user-initials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: #ddd;
+    border-radius: 50%;
+    font-weight: bold;
+    color: $delta-blue;
+    text-transform: uppercase;
+}

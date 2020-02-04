@@ -34,6 +34,13 @@
         text-align: center;
     }
 
+
+    & .name-inputs {
+        display: flex;
+        justify-content: stretch;
+        max-width: 89%;
+    }
+
 }
 
 .form-group {

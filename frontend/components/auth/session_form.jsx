@@ -7,6 +7,8 @@ class SessionForm extends React.Component {
         this.state = {
             email: "",
             password: "",
+            firstname: "",
+            lastname: "",
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -38,6 +40,23 @@ class SessionForm extends React.Component {
         );
     }
 
+    nameInputs(isSignup) {
+        if (isSignup) {
+            return (
+                <div className="name-inputs">
+                    <div className="form-group">
+                        <label htmlFor="firstname">First Name</label>
+                        <input type="text" name="firstname" placeholder="First Name" value={this.state.firstname} onChange={this.update('firstname')} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="lastname">Last Name</label>
+                        <input type="text" name="lastname" placeholder="Last Name" value={this.state.lastname} onChange={this.update('lastname')} />
+                    </div>
+                </div>
+            );
+        }
+    }
+
     render() {
         const { formType } = this.props;
         const isSignup = (formType === "signup");
@@ -59,6 +78,7 @@ class SessionForm extends React.Component {
                         <label htmlFor="password">Password</label>
                         <input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.update('password')} />
                     </div>
+                    {this.nameInputs(isSignup)}
                     <div className="form-group">
                         <button type="submit">{(isSignup) ? 'Sign Up' : 'Log In'}</button>
                     </div>
