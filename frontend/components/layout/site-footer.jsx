@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
 import Icon from '../common/icon';
 import FalseLink from '../common/false_link';
@@ -69,11 +70,15 @@ const FooterLinkItem = ({ key, text, to }) => (
     <li key={key}><FalseLink to={to}>{text}</FalseLink></li>
 );
 
+const FooterInterlude = () => (
+    <div className="footer-interlude">
+        <FalseLink>Ready to go? Let's start planning your trip <Icon className="fas fa-angle-right" /></FalseLink>
+    </div>
+);
+
 const SiteFooter = () => (
     <footer className="site-footer">
-        <div className="footer-interlude">
-            <FalseLink>Ready to go? Let's get started planning your trip <Icon className="fas fa-angle-right" /></FalseLink>
-        </div>
+        <Route exact path="/" component={FooterInterlude} />
         <div className="container">
             <div className="footer-links">
                 <FooterLinkList menu={ footerMenu } />
