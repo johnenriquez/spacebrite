@@ -1,6 +1,10 @@
 .session-form-container {
     flex: 1;
-    background: #00f;
+    background: lighten($delta-blue, 20%);
+    background-image: image-url('milky-way-1920.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
     min-height: 60vh;
     display: flex;
     flex-direction: row-reverse;
@@ -11,6 +15,54 @@
     flex: 1;
     background-color: #fff;
     padding: 3em;
-    max-width: 40%;
-    // margin: 3em auto;
+    max-width: 25%;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    & header {
+        margin: 0 0 .5em;
+    }
+
+    & h1 {
+        font-size: 2.5rem;
+    }
+
+    & footer {
+        margin: 2em 0;
+        text-align: center;
+    }
+
+}
+
+.form-group {
+    margin: .5em 0;
+
+    & label { display: none; }
+
+    & input {
+        width: 100%;
+        max-width: 80%;
+        border: 2px solid #ccc;
+        color: #000;
+
+        &:focus {
+            border-color: $delta-blue;
+        }
+    }
+}
+
+.form-errors {
+    margin-bottom: .5em;
+    list-style: disc;
+
+    & li {
+        color: $delta-red;
+        margin-left: 25px;
+    }
+}
+
+.form-switch-message {
+    color: #777;
 }

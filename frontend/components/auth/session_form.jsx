@@ -32,9 +32,9 @@ class SessionForm extends React.Component {
 
     formSwitchMessage(formType) {
         return (formType === "signup") ? (
-            <p className="form-switch-message"><Link to="/login">Log In</Link> instead</p>
+            <p className="form-switch-message">or <Link to="/login">Log In</Link> instead</p>
         ) : (
-            <p className="form-switch-message"><Link to="/signup">Sign Up</Link> instead</p>
+            <p className="form-switch-message">or <Link to="/signup">Sign Up</Link> instead</p>
         );
     }
 

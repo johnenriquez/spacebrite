@@ -38,11 +38,11 @@ const footerMenu = [
     },
 ];
 
-const FooterLinkSection = ({section}) => {
+const FooterLinkSection = ({section, key}) => {
     let title = Object.keys(section)[0];
     let links = Object.values(section)[0];
     return (
-        <li className="link-section">
+        <li key={key} className="link-section">
             <h3>{title}</h3>
             <ul>
                 {links.map((link, i) => (
@@ -59,7 +59,7 @@ const FooterLinkSection = ({section}) => {
 
 const FooterLinkList = ({menu}) => (
     <ul className="footer-link-list">
-        {menu.map(section => <FooterLinkSection section={section} />)}
+        {menu.map((section, i) => <FooterLinkSection key={i} section={section} />)}
     </ul>
 );
 
