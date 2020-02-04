@@ -72,13 +72,20 @@ const SiteFooter = () => (
         <div className="footer-interlude">
             <FalseLink>Ready to go? Let's get started planning your trip <Icon className="fas fa-angle-right" /></FalseLink>
         </div>
-        <div className="footer-links">
-            <div className="container">
+        <div className="container">
+            <div className="footer-links">
                 <FooterLinkList menu={ footerMenu } />
             </div>
-        </div>
-        <div className="footer-copyright">
-            <a href="https://github.com/johnenriquez/spacebrite"><Icon className="fab fa-github" /></a>
+            <div className="colophon">
+                <p>&copy; 2020 Spacebrite Space Lines, Inc. | Travel may be on other spacelines.</p>
+                <p>Terms and conditions apply to all offers and NovaMiles benefits. See specific offer for details, and visit <FalseLink>NovaMiles Membership Guide &amp; Program Rules</FalseLink></p>
+            </div>
+            <div className="footer-icons">
+                <ul>
+                    <li><Icon className="fas fa-globe" /> <FalseLink>Earth - English</FalseLink> <Icon className="fas fa-arrows-alt-h" /> <FalseLink className="dim">Garblovian</FalseLink></li>
+                    <li><a href="https://github.com/johnenriquez/spacebrite"><Icon className="fab fa-github" /> Source</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 );
