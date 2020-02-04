@@ -16,8 +16,9 @@ const footerMenu = [
     { "Support": [
             { "Help and contact": "#" },
             { "Before you book": "#" },
-            { "At the airport": "#" },
-            { "On the flight": "#" },
+            { "At the spaceport": "#" },
+            { "During the flight": "#" },
+            { "Interplanetary hazards" : "#" },
             { "Lost property": "#" },
         ]
     },
@@ -26,6 +27,7 @@ const footerMenu = [
             { "Conditions of Carriage": "#" },
             { "Tarmac delay plan": "#" },
             { "Customer commitment": "#" },
+            { "Space pirate deterrence": "#" },
         ]
     },
     { "More": [
