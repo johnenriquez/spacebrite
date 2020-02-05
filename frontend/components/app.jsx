@@ -1,5 +1,8 @@
 import React from "react";
-import { Route } from 'react-router-dom';
+import {
+    Route,
+    Switch,
+} from 'react-router-dom';
 
 import LoginFormContainer from './auth/login_form_container';
 import SignupFormContainer from './auth/signup_form_container';
@@ -8,6 +11,7 @@ import HomePage from './home/home_page';
 import SiteHeader from './layout/site-header';
 import SiteFooter from './layout/site-footer';
 import { AuthRoute } from "../util/route_util";
+import NotFound from './common/not_found';
 
 const App = () => (
     <div className="site">
@@ -15,9 +19,12 @@ const App = () => (
         <SiteHeader />
 
         <main className="site-body">
-            <AuthRoute path="/login" component={LoginFormContainer} />
-            <AuthRoute path="/signup" component={SignupFormContainer} />
-            <Route exact path="/" component={HomePage} />
+            <Switch>
+                <AuthRoute path="/login" component={LoginFormContainer} />
+                <AuthRoute path="/signup" component={SignupFormContainer} />
+                <Route exact path="/" component={HomePage} />
+                <Route component={NotFound} />
+            </Switch>
         </main>
 
         <SiteFooter />

@@ -1,0 +1,25 @@
+.tagline {
+    font-size: .9rem;
+    display: block;
+    color: $delta-blue;
+}
+
+.not-found {
+    $not-found-expand: 700px;
+
+    background: #ddd;
+    padding: 4em 2em;
+
+    @media (min-width: $not-found-expand) {
+        padding: 5em 2em;
+    }
+
+    & h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+
+        @media (min-width: $not-found-expand) {
+            font-size: 3rem;
+        }
+    }
+}
