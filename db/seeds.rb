@@ -8,7 +8,8 @@
 
 User.destroy_all
 User.create([
-    { email: 'demoadmin@spacebrite.io', password: '4zHFGHFjHRpBbBDf', firstname: 'Demo', lastname: 'admin' },
+    { email: 'demoadmin@spacebrite.io', password: '4zHFGHFjHRpBbBDf', firstname: 'Demo', lastname: 'Admin', admin: true },
+    { email: 'demouser001@spacebrite.io', password: 'cf2XvxnZGKR91TfS7', firstname: 'Demo', lastname: 'User' },
     { email: 'normaluser001@spacebrite.io', password: 'STfXvMS7cf2crMmz', firstname: 'Normal', lastname: 'User' },
     { email: 'normaluser002@spacebrite.io', password: 'xnZGKR91X7OciLIQ', firstname: 'Another', lastname: 'User' },
 ])

@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
             lastname: "",
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.loginDemoUser = this.loginDemoUser.bind(this);
     }
 
     componentWillUnmount() {
@@ -38,10 +39,15 @@ class SessionForm extends React.Component {
 
     formSwitchMessage(formType) {
         return (formType === "signup") ? (
-            <p className="form-switch-message">or <Link to="/login">Log In</Link> instead</p>
+            <Link to="/login">Log In</Link>
         ) : (
-            <p className="form-switch-message">or <Link to="/signup">Sign Up</Link> instead</p>
+            <Link to="/signup">Sign Up</Link>
         );
+    }
+
+    loginDemoUser(e) {
+        e.preventDefault();
+        this.props.loginDemoUser();
     }
 
     nameInputs(isSignup) {
@@ -87,7 +93,7 @@ class SessionForm extends React.Component {
                         <button type="submit">{(isSignup) ? 'Sign Up' : 'Log In'}</button>
                     </div>
                     <footer className="session-form-footer">
-                        {this.formSwitchMessage(formType)}
+                        <p className="form-switch-message">{this.formSwitchMessage(formType)} instead or try the <a href="#" onClick={this.loginDemoUser}>Demo User</a></p>
                     </footer>
                 </form>
             </div>
