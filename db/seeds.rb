@@ -13,3 +13,12 @@ User.create([
     { email: 'normaluser001@spacebrite.io', password: 'STfXvMS7cf2crMmz', firstname: 'Normal', lastname: 'User' },
     { email: 'normaluser002@spacebrite.io', password: 'xnZGKR91X7OciLIQ', firstname: 'Another', lastname: 'User' },
 ])
+
+Spaceport.destroy_all
+Spaceport.create([
+    { identifier: 'USX', locality: 'United States', planet: 'Earth' },
+    { identifier: 'MON', locality: 'Moon', planet: 'Earth' },
+    { identifier: 'OMQ', locality: 'Olympus Mons', planet: 'Mars' },
+    { identifier: 'VMZ', locality: 'Valles Marineris', planet: 'Mars' },
+    { identifier: 'ERP', locality: 'Europa', planet: 'Jupiter' },
+])

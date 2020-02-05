@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_04_230526) do
+ActiveRecord::Schema.define(version: 2020_02_05_230247) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "spaceports", force: :cascade do |t|
+    t.string "identifier", null: false
+    t.string "locality", null: false
+    t.string "planet", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["identifier"], name: "index_spaceports_on_identifier", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false

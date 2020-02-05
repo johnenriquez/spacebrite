@@ -1,0 +1,1 @@
+json.extract! spaceport, :id, :identifier, :locality, :planet

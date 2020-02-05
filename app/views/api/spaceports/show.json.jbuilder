@@ -1,0 +1,1 @@
+json.partial! 'api/spaceports/spaceport', spaceport: @spaceport
