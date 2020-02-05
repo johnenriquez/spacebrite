@@ -13,6 +13,10 @@ class SessionForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentWillUnmount() {
+        this.props.clearSessionErrors();
+    }
+
     update(field) {
         return e => this.setState({ [field]: e.target.value });
     }
