@@ -12,6 +12,7 @@ import SiteHeader from './layout/site-header';
 import SiteFooter from './layout/site-footer';
 import { AuthRoute } from "../util/route_util";
 import NotFound from './common/not_found';
+import SpaceportShow from './spaceports/spaceport_show';
 
 const App = () => (
     <div className="site">
@@ -22,6 +23,7 @@ const App = () => (
             <Switch>
                 <AuthRoute path="/login" component={LoginFormContainer} />
                 <AuthRoute path="/signup" component={SignupFormContainer} />
+                <Route path="/spaceports/:spaceportId" component={SpaceportShow} />
                 <Route exact path="/" component={HomePage} />
                 <Route component={NotFound} />
             </Switch>

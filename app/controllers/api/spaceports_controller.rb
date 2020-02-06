@@ -1,6 +1,6 @@
 class Api::SpaceportsController < ApplicationController
 
-    before_action :require_logged_in, except: [:index]
+    before_action :require_logged_in, except: [:index, :show]
     
     def index
         @spaceports = Spaceport.all
@@ -13,6 +13,10 @@ class Api::SpaceportsController < ApplicationController
         else
             render json: @spaceport.errors.full_messages, status: 422
         end
+    end
+
+    def show
+        @spaceport = Spaceport.find(params[:id])
     end
 
     def update
