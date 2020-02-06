@@ -1,0 +1,1 @@
+json.extract! flight, :id, :number, :spaceline, :spacecraft, :origin_id, :departure_time, :destination_id, :arrival_time

@@ -16,7 +16,7 @@ export const fetchSpaceports = () => dispatch => (
 export const fetchSpaceport = spaceportId => dispatch => (
     SpaceportApiUtil.fetchSpaceport(spaceportId)
         .then(
-            spaceport => dispatch(receiveSpaceport(spaceport)),
+            payload => dispatch(receiveSpaceport(payload)),
             errors => dispatch(receiveSpaceportErrors(errors.responseJSON))
         )
 );
@@ -26,9 +26,10 @@ export const receiveSpaceports = spaceports => ({
     spaceports,
 });
 
-export const receiveSpaceport = spaceport => ({
+export const receiveSpaceport = payload => ({
     type: RECEIVE_SPACEPORT,
-    spaceport,
+    spaceport: payload.spaceport,
+    flights: payload.flights,
 });
 
 export const receiveSpaceportErrors = errors => ({

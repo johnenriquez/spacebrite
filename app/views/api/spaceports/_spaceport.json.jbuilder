@@ -1,1 +1,1 @@
-json.extract! spaceport, :id, :identifier, :locality, :planet
+json.extract! spaceport, :id, :identifier, :locality, :planet, :outbound_flight_ids, :inbound_flight_ids
