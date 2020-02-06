@@ -1,5 +1,5 @@
-json.set! :spaceports do
-    json.array! @spaceports do |spaceport|
-        json.partial! 'api/spaceports/spaceport', spaceport: spaceport
+@spaceports.each do |spaceport|
+    json.set! spaceport.id do
+        json.partial! 'spaceport', spaceport: spaceport
     end
 end
