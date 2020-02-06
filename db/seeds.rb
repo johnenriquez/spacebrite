@@ -22,3 +22,7 @@ Spaceport.create([
     { identifier: 'VMZ', locality: 'Valles Marineris', planet: 'Mars' },
     { identifier: 'ERP', locality: 'Europa', planet: 'Jupiter' },
 ])
+
+
+Flight.destroy_all
+Flight.seed_flights(30)
