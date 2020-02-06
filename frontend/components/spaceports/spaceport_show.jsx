@@ -1,21 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchSpaceport } from '../../actions/spaceport_actions';
+import FlightList from '../flights/flight_list';
+import SpaceportHeader from './spaceport_header';
 
-const SpaceportHeader = ({ spaceport}) => (
-    <header className="spaceport-header">
-        <h1>{spaceport.identifier}</h1>
-        <p>{spaceport.locality}, {spaceport.planet}</p>
-    </header>
-);
-
-const FlightList = ({ title, spaceport }) => (
-    <div className="flight-list">
-        <header>
-            <h2>{title}</h2>
-        </header>
-    </div>
-);
 
 class SpaceportShow extends React.Component {
 
@@ -23,6 +11,7 @@ class SpaceportShow extends React.Component {
         super(props);
     }
 
+    // TODO: properly update component on url/id switch
     // componentDidUpdate(prevProps) {
     //     if (this.props.spaceport && prevProps.spaceport && this.props.spaceport.id !== prevProps.spaceport.id) {
     //         this.props.fetchSpaceport();
@@ -40,8 +29,8 @@ class SpaceportShow extends React.Component {
                 <div className="spaceport-show">
                     <SpaceportHeader spaceport={spaceport} />
                     <main>
-                        <FlightList title="Inbound Flights" spaceport={spaceport} />
-                        <FlightList title="Outbound Flights" spaceport={spaceport} />
+                        <FlightList title="Inbound Flights" flights={spaceport.inbound_flights} />
+                        <FlightList title="Outbound Flights" flights={spaceport.outbound_flights} />
                     </main>
                 </div>
             );
