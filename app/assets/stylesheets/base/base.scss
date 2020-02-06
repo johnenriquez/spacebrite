@@ -16,6 +16,12 @@ h4      { font-size: 1em;       /* 1*16 = 16 */         }
 h5      { font-size: 0.83em;    /* 0.83*16 = 13.28 */   }
 h6      { font-size: 0.75em;    /* 0.75*16 = 12 */      }
 
+.tagline {
+    font-size: .9rem;
+    display: block;
+    color: $delta-blue;
+}
+
 p {
     line-height: 1.5;
     margin: 0 0 1em;

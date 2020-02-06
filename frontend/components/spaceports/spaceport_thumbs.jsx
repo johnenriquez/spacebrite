@@ -13,7 +13,12 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const SpaceportThumb = ({key, spaceport}) => (
-    <li key={key}><Link to={ `/spaceports/${spaceport.id}` }>{spaceport.identifier}</Link></li>
+    <li className="spaceport-thumb" key={key}>
+        <Link to={ `/spaceports/${spaceport.id}` }>
+            <h3><span>{spaceport.identifier}</span></h3>
+            <p>{spaceport.locality}, {spaceport.planet}</p>
+        </Link>
+    </li>
 );
 
 class SpaceportThumbs extends React.Component {

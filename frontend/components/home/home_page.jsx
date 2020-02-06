@@ -6,7 +6,10 @@ const HomePage = () => (
     <section className="homepage">
         <SplashBanner />
         <div className="recommended-destinations">
-            <h2>Recommended Destinations</h2>
+            <h2>
+                <span className="tagline">Get Away</span>
+                Recommended Destinations
+            </h2>
             <SpaceportThumbs />
         </div>
     </section>

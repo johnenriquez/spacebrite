@@ -1,0 +1,82 @@
+$spaceport-thumb-break-md: 550px;
+$spaceport-thumb-break-lg: 1200px;
+
+.recommended-destinations {
+    padding: 2em;
+    background-color: #ddd;
+
+    h2 {
+        margin-bottom: 1rem;
+        @media (min-width: $spaceport-thumb-break-md) {
+            text-align: center;
+            font-size: 2rem;
+            padding: 2rem;
+        }
+    }
+}
+
+
+.spaceport-thumbs ul {
+    @media (min-width: $spaceport-thumb-break-md) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @media (min-width: $spaceport-thumb-break-lg) {
+        flex-wrap: nowrap;
+    }
+}
+
+.spaceport-thumb {
+    margin: 1rem 0;
+
+    @media (min-width: $spaceport-thumb-break-md) {
+        margin: .5rem .5rem .5rem 0;
+        flex-basis: calc(50% - 1rem);
+    }
+
+    @media (min-width: $spaceport-thumb-break-lg) {
+        flex-basis: auto;
+        flex: 1;
+        margin-bottom: 3rem;
+    }
+
+    & a { 
+        padding: 2rem 1rem;
+        background-color: $delta-blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+
+        @media (min-width: $spaceport-thumb-break-md) {
+            padding: 3rem 2rem;
+        }
+
+        &:hover {
+            text-decoration: none;
+            background-color: lighten($delta-blue, 5%);
+        }
+    }
+
+    & h3 {
+        display: inline;
+        font-size: 1.7rem;
+        margin-bottom: .5rem;
+        
+        @media (min-width: $spaceport-thumb-break-md) {
+            font-size: 2.5rem;
+        }
+
+        & span {
+            border-bottom: 3px solid $delta-red;
+            padding-bottom: .5rem;
+        }
+    }
+
+    & p {
+        margin: 0;
+        color: #999;
+        font-size: .9rem;
+    }
+}
