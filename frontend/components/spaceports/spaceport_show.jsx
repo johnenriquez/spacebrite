@@ -7,10 +7,6 @@ import SpaceportHeader from './spaceport_header';
 
 class SpaceportShow extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     // TODO: properly update component on url/id switch
     // componentDidUpdate(prevProps) {
     //     if (this.props.spaceport && prevProps.spaceport && this.props.spaceport.id !== prevProps.spaceport.id) {
@@ -29,8 +25,8 @@ class SpaceportShow extends React.Component {
                 <div className="spaceport-show">
                     <SpaceportHeader spaceport={spaceport} />
                     <main>
-                        <FlightList title="Inbound Flights" flights={spaceport.inbound_flights} />
-                        <FlightList title="Outbound Flights" flights={spaceport.outbound_flights} />
+                        <FlightList title="Inbound Flights" flights={spaceport.inboundFlights} />
+                        <FlightList title="Outbound Flights" flights={spaceport.outboundFlights} />
                     </main>
                 </div>
             );
@@ -42,9 +38,22 @@ class SpaceportShow extends React.Component {
     }
 }
 
-const mapStateToProps = (state, ownProps) => ({
-    spaceport: state.entities.spaceports[ownProps.match.params.spaceportId],
-});
+const mapStateToProps = (state, ownProps) => {
+    let spaceportId = ownProps.match.params.spaceportId;
+    let spaceport = state.entities.spaceports[spaceportId];
+    let flights = state.entities.flights;
+    if (spaceport && spaceport.inbound_flight_ids && spaceport.outbound_flight_ids) {
+        spaceport = Object.assign(
+            {},
+            spaceport,
+            {
+                outboundFlights: spaceport.outbound_flight_ids.map(id => flights[id]),
+                inboundFlights: spaceport.inbound_flight_ids.map(id => flights[id]),
+            }
+        );
+    }
+    return { spaceport }
+};
 const mapDispatchToProps = (dispatch, ownProps) => ({
     fetchSpaceport: () => dispatch(fetchSpaceport(ownProps.match.params.spaceportId)),
 });

@@ -1,0 +1,11 @@
+.spaceport-show {
+    padding: 2rem;
+    flex: 1;
+    background-color: #ddd;
+}
+
+.spaceport-header {
+    @media (min-width: 700px) {
+        font-size: 1.8rem;
+    }
+}

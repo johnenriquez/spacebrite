@@ -1,0 +1,137 @@
+$flight-date-md: 800px;
+
+.flight-list {
+    padding: 2rem 0;
+
+    & h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.flight-list-item {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+    background-color: #f0f0f0;
+    transition: background $default-transition-length;
+
+    &:hover { background-color: #fff; }
+
+    & .spacecraft-details {
+        display: flex;
+        justify-content: space-between;
+        font-size: .8rem;
+        margin-bottom: .5rem;
+
+        & .number {
+            color: $delta-blue;
+        }
+
+        & .craft {
+            color: #999;
+            text-align: right;
+        }
+    }
+
+    & .flight-times {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & i {
+            color: #ccc;
+            @media (min-width: $flight-date-md) {
+                font-size: 2rem;
+            }
+        }
+
+        & .flight-date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &.departure {
+                align-items: flex-start;
+            }
+
+            &.arrival {
+                align-items: flex-end;
+            }
+
+            & .date {
+                font-size: 1.2rem;
+
+                @media (min-width: $flight-date-md) {
+                    font-size: 2rem;
+                }
+            }
+
+            & .time {
+                font-size: .9rem;
+                @media (min-width: $flight-date-md) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    & .rule {
+        border-top: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+
+        &::before, &::after {
+            display: block;
+            content: '';
+            width: 6px;
+            height: 6px;
+            margin-top: -3px;
+            background-color: lighten($delta-blue, 20%);
+        }
+    }
+
+    & .org-dest-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+
+        @media (min-width: $flight-date-md) {
+            margin-bottom: 1rem;
+        }
+
+        & p {
+            margin: 0;
+
+            @media (min-width: $flight-date-md) {
+                font-size: 1.5rem;
+            }
+        }
+
+        & small {
+            color: #999;
+            color: #ccc;
+        }
+    }
+
+    & .flight-misc {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        font-size: .8rem;
+
+        & p {
+            margin-right: .5rem;
+        }
+
+        & .icons {
+            margin-left: auto;
+            display: flex;
+
+            & li {
+                color: #999;
+                padding: 0 .3em;
+            }
+        }
+    }
+}
