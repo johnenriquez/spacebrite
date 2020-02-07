@@ -45,3 +45,7 @@ As this open beta rolls out, users will soon be able to:
 - plan trips
 - check in to flights
 
+## Feedback
+
+Feature requests are always welcome. The cleanest way to send any feedback is to [open an issue](https://github.com/johnenriquez/spacebrite/issues).
+
