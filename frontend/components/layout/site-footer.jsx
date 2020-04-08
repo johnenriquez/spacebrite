@@ -6,7 +6,8 @@ import FalseLink from '../common/false_link';
 
 
 const footerMenu = [
-    { "About Spacebrite": [
+    {
+        "About Spacebrite": [
             { "Our story": "#" },
             { "The Spacebrite blog": "#" },
             { "Media center": "#" },
@@ -14,16 +15,18 @@ const footerMenu = [
             { "Careers": "#" },
         ]
     },
-    { "Support": [
+    {
+        "Support": [
             { "Help and contact": "#" },
             { "Before you book": "#" },
             { "At the spaceport": "#" },
             { "During the flight": "#" },
-            { "Interplanetary hazards" : "#" },
+            { "Interplanetary hazards": "#" },
             { "Lost property": "#" },
         ]
     },
-    { "Policies": [
+    {
+        "Policies": [
             { "Sustainability": "#" },
             { "Conditions of Carriage": "#" },
             { "Tarmac delay plan": "#" },
@@ -31,7 +34,8 @@ const footerMenu = [
             { "Space pirate deterrence": "#" },
         ]
     },
-    { "More": [
+    {
+        "More": [
             { "Business Travel": "#" },
             { "Spacebrite Cargo": "#" },
             { "Travel trade": "#" },
@@ -41,7 +45,7 @@ const footerMenu = [
     },
 ];
 
-const FooterLinkSection = ({section, key}) => {
+const FooterLinkSection = ({ section, key }) => {
     let title = Object.keys(section)[0];
     let links = Object.values(section)[0];
     return (
@@ -60,7 +64,7 @@ const FooterLinkSection = ({section, key}) => {
     );
 }
 
-const FooterLinkList = ({menu}) => (
+const FooterLinkList = ({ menu }) => (
     <ul className="footer-link-list">
         {menu.map((section, i) => <FooterLinkSection key={i} section={section} />)}
     </ul>
@@ -70,18 +74,25 @@ const FooterLinkItem = ({ key, text, to }) => (
     <li key={key}><FalseLink to={to}>{text}</FalseLink></li>
 );
 
-const FooterInterlude = () => (
-    <div className="footer-interlude">
-        <FalseLink>Ready to go? Let's start planning your trip <Icon className="fas fa-angle-right" /></FalseLink>
-    </div>
-);
+const FooterInterlude = () => {
+    const scrollTo = element => e => {
+        e.preventDefault();
+        document.querySelector(element)
+        .scrollIntoView({ behavior: 'smooth' });
+    }
+    return (
+        <div className="footer-interlude">
+            <FalseLink onClick={scrollTo('.recommended-destinations')}>Ready to go? Let's start planning your trip <Icon className="fas fa-angle-right" /></FalseLink>
+        </div>
+    );
+}
 
 const SiteFooter = () => (
     <footer className="site-footer">
         <Route exact path="/" component={FooterInterlude} />
         <div className="container">
             <div className="footer-links">
-                <FooterLinkList menu={ footerMenu } />
+                <FooterLinkList menu={footerMenu} />
             </div>
             <div className="colophon">
                 <p>&copy; 2020 Spacebrite Space Lines, Inc. | Travel may be on other spacelines.</p>

@@ -5,7 +5,7 @@ import SpaceportThumbs from '../spaceports/spaceport_thumbs';
 const HomePage = () => (
     <section className="homepage">
         <SplashBanner />
-        <div className="recommended-destinations">
+        <div id="recommended-destinations" className="recommended-destinations">
             <h2>
                 <span className="tagline">Get Away</span>
                 Recommended Destinations
