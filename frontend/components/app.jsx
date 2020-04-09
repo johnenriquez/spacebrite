@@ -13,6 +13,7 @@ import SiteFooter from './layout/site-footer';
 import { AuthRoute } from "../util/route_util";
 import NotFound from './common/not_found';
 import SpaceportShow from './spaceports/spaceport_show';
+import FlightShow from './flights/flight_show';
 
 const App = () => (
     <div className="site">
@@ -24,6 +25,7 @@ const App = () => (
                 <AuthRoute path="/login" component={LoginFormContainer} />
                 <AuthRoute path="/signup" component={SignupFormContainer} />
                 <Route path="/spaceports/:spaceportId" component={SpaceportShow} />
+                <Route path="/flights/:flightId" component={FlightShow} />
                 <Route exact path="/" component={HomePage} />
                 <Route component={NotFound} />
             </Switch>

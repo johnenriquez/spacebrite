@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchSpaceports } from '../../actions/spaceport_actions';
 import Icon from '../common/icon';
@@ -93,7 +94,7 @@ class FlightListItem extends React.Component {
                         <p className="destination-code">{destinationCode}</p>
                     </div>
                     <div className="flight-misc">
-                        <p><FalseLink>Details</FalseLink></p>
+                        <p><Link to={`/flights/${flight.id}`}>Details</Link></p>
                         <p><FalseLink>Seats</FalseLink></p>
                         <ul className="icons">
                             <li><Icon className="fas fa-wifi" /></li>
