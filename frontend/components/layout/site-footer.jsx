@@ -7,42 +7,48 @@ import FalseLink from '../common/false_link';
 
 const footerMenu = [
     {
-        "About Spacebrite": [
-            { "Our story": "#" },
-            { "The Spacebrite blog": "#" },
-            { "Media center": "#" },
-            { "Annual reports": "#" },
-            { "Careers": "#" },
+        "Contact": [
+            { "John Enriquez": "https://johnenriquez.com/" },
+            { "Github": "https://github.com/johnenriquez" },
+            { "LinkedIn": "https://www.linkedin.com/in/johnenriquez/" },
         ]
     },
     {
-        "Support": [
-            { "Help and contact": "#" },
-            { "Before you book": "#" },
-            { "At the spaceport": "#" },
-            { "During the flight": "#" },
-            { "Interplanetary hazards": "#" },
-            { "Lost property": "#" },
+        "Other Projects": [
+            { "Orbit Tracker": "https://johnenriquez.com/orbit-tracker/" },
+            { "Predicting Pulsars": "https://github.com/johnenriquez/predicting_pulsars/blob/master/predicting_pulsars.ipynb" },
+            { "Morsel": "https://themorsel.herokuapp.com/#/" },
+            { "Rumble": "https://rumble-demo.herokuapp.com/#/" },
         ]
     },
-    {
-        "Policies": [
-            { "Sustainability": "#" },
-            { "Conditions of Carriage": "#" },
-            { "Tarmac delay plan": "#" },
-            { "Customer commitment": "#" },
-            { "Space pirate deterrence": "#" },
-        ]
-    },
-    {
-        "More": [
-            { "Business Travel": "#" },
-            { "Spacebrite Cargo": "#" },
-            { "Travel trade": "#" },
-            { "Affiliates": "#" },
-            { "Partners": "#" },
-        ]
-    },
+    // {
+    //     "Support": [
+    //         { "Help and contact": "#" },
+    //         { "Before you book": "#" },
+    //         { "At the spaceport": "#" },
+    //         { "During the flight": "#" },
+    //         { "Interplanetary hazards": "#" },
+    //         { "Lost property": "#" },
+    //     ]
+    // },
+    // {
+    //     "Policies": [
+    //         { "Sustainability": "#" },
+    //         { "Conditions of Carriage": "#" },
+    //         { "Tarmac delay plan": "#" },
+    //         { "Customer commitment": "#" },
+    //         { "Space pirate deterrence": "#" },
+    //     ]
+    // },
+    // {
+    //     "More": [
+    //         { "Business Travel": "#" },
+    //         { "Spacebrite Cargo": "#" },
+    //         { "Travel trade": "#" },
+    //         { "Affiliates": "#" },
+    //         { "Partners": "#" },
+    //     ]
+    // },
 ];
 
 const FooterLinkSection = ({ section, key }) => {
@@ -96,11 +102,11 @@ const SiteFooter = () => (
             </div>
             <div className="colophon">
                 <p>&copy; 2020 Spacebrite Space Lines, Inc. | Travel may be on other spacelines.</p>
-                <p>Terms and conditions apply to all offers and NovaMiles benefits. See specific offer for details, and visit <FalseLink>NovaMiles Membership Guide &amp; Program Rules</FalseLink></p>
+                <p>Terms and conditions apply to all offers and NovaMiles benefits. See specific offer for details, and visit NovaMiles Membership Guide &amp; Program Rules</p>
             </div>
             <div className="footer-icons">
                 <ul>
-                    <li><Icon className="fas fa-globe" /> <FalseLink>Earth - English</FalseLink> <Icon className="fas fa-arrows-alt-h" /> <FalseLink className="dim">Garblovian</FalseLink></li>
+                    <li><Icon className="fas fa-globe" /> Earth - English <Icon className="fas fa-arrows-alt-h" /> Garblovian</li>
                     <li><a href="https://github.com/johnenriquez/spacebrite"><Icon className="fab fa-github" /> Source</a></li>
                 </ul>
             </div>
