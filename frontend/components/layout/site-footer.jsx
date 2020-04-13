@@ -77,7 +77,7 @@ const FooterLinkList = ({ menu }) => (
 );
 
 const FooterLinkItem = ({ key, text, to }) => (
-    <li key={key}><FalseLink to={to}>{text}</FalseLink></li>
+    <li key={key}><a href={to}>{text}</a></li>
 );
 
 const FooterInterlude = () => {
