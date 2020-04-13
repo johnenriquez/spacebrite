@@ -25,10 +25,8 @@ class Announcement extends React.Component {
                     <FalseLink onClick={this.closeAnnouncement}><Icon className="fas fa-times" /></FalseLink>
                     <p>
                         <Icon className="fas fa-exclamation-circle" />
-                        <FalseLink>
-                            Important information if you're flying to Europa
-                            <Icon className="fas fa-arrow-right" />
-                        </FalseLink>
+                        Important information if you're flying to Europa
+                        <Icon className="fas fa-arrow-right" />
                     </p>
                 </div>
             </div>
