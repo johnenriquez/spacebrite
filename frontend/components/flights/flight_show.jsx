@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+// import fetchFlight from flight_actions.js
 
 class FlightShow extends React.Component {
 
@@ -12,7 +14,7 @@ class FlightShow extends React.Component {
         if (flight) {
             return (
                 <div className="flight-show">
-                    Flight
+                    Turn this into modal {flight.number}
                 </div>
             );
         } else {
