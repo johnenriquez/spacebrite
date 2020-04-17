@@ -94,8 +94,8 @@ class FlightListItem extends React.Component {
                         <p className="destination-code">{destinationCode}</p>
                     </div>
                     <div className="flight-misc">
-                        <p><Link to={`/flights/${flight.id}`}>Details</Link></p>
-                        <p><FalseLink>Seats</FalseLink></p>
+                        {/* <p><Link to={`/flights/${flight.id}`}>Details</Link></p>
+                        <p><FalseLink>Seats</FalseLink></p> */}
                         <ul className="icons">
                             <li><Icon className="fas fa-wifi" /></li>
                             <li><Icon className="fas fa-plug" /></li>
