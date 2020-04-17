@@ -11,3 +11,10 @@ export const fetchSpaceport = spaceportId => (
         url: `/api/spaceports/${spaceportId}`,
     })
 );
+
+export const fetchFlight = flightId => (
+    $.ajax({
+        type: 'GET',
+        url: `/api/flights/${flightId}`,
+    })
+);
